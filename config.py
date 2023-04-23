@@ -9,4 +9,4 @@ ALIVE_TEXT = """ **~  ʙᴀʀᴀᴛʜ  sʏsᴛᴇᴍ:**
 ━━━━━━━━━━━━━━━━━━━
 """
 
-BARATH = "https://telegra.ph/file/3ce4da02ae84dd2097824.jpg"
+BARATH = "https://te.legra.ph/file/6a839cecad51014a32254.mp4"
