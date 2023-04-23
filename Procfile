@@ -1,1 +1,1 @@
-worker: python3 -m JokerBot
+worker: python3 -m Barath
