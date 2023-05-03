@@ -25,7 +25,7 @@ async def promote_member(_, message):
      elif command == "promote" and can_promote_members:
              privileges = ChatPrivileges(
                         can_delete_messages=True, can_restrict_members=True,
-                        can_change_info=True, can_invite_users=True, can_pin_messages=True)
+                        can_change_info=True, can_invite_users=True, can_pin_messages=True, can_manage_video_chats=True)
              await message.chat.promote_member(user_id=user_id, privileges=privileges)
              return await message.edit("=> Promoted!")
                      
