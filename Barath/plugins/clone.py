@@ -1,6 +1,6 @@
 from Barath import barath
 from pyrogram import filters
-from Barath.barath_db.clone import store_profile, get_profile
+from Barath.barath_db.clone_db import store_profile, get_profile
 
 import config
 
