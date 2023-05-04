@@ -48,7 +48,7 @@ async def alive(_, message):
     await asyncio.sleep(3)
     await message.delete()
     alive = await message.reply_animation(BARATH, caption="")
-    await alive.edit_caption(f"Hello Master, **{name}**,\nYou Are Using Barath And Your Current Pyrogram Version is {pyrover}!")
+    await alive.edit_caption(f"Hello Master **{name}**,\nYou Are Using Barath And Your Current Pyrogram Version is {pyrover}!")
 
 
 @barath.on_message(filters.command("ping",prefixes=HANDLER) & filters.user(OWNER_ID))
