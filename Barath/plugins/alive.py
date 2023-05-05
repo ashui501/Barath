@@ -1,7 +1,7 @@
 import time 
 import random 
 import asyncio
-from config import HANDLER, OWNER_ID, BARATH, ALIVE_TEXT
+from config import HANDLER, OWNER_ID, BARATH
 from pyrogram import filters, __version__ as pyrover
 from Barath import barath, get_readable_time, StartTime
 
