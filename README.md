@@ -1,1 +1,3 @@
-# BarathUserBot Based On Pyrogram
+# Barath
+
+Simple UserBot Based On Pyrogram
