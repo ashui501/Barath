@@ -147,5 +147,5 @@ async def purge(_, message):
            await barath.delete_messages(chat_id=chat_id, message_ids=message_ids)
         except Exception as e:
               return await message.edit(f"Somthing wrong Happens:\n{e}")
-        return await message.edit(f"=> Purged {len(message_ids)} Message(s)")
+        return await message.edit(f"=> Purged {len(message_ids)} Messages")
        
