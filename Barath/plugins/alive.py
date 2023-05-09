@@ -17,34 +17,11 @@ s1 = """
 ╚═══╩╝╚╩╝╚╝╚╩═╩╝╚╝
 """
 
-s2 = """
-
-
-╭━━╮╱╱╱╱╱╱╱╱╭╮╭╮
-┃╭╮┃╱╱╱╱╱╱╱╭╯╰┫┃
-┃╰╯╰┳━━┳━┳━┻╮╭┫╰━╮
-┃╭━╮┃╭╮┃╭┫╭╮┃┃┃╭╮┃
-┃╰━╯┃╭╮┃┃┃╭╮┃╰┫┃┃┃
-╰━━━┻╯╰┻╯╰╯╰┻━┻╯╰╯
-"""
-
-s3 = """
-
-
-╭━━╮╱╱╱╱╱╱╱╭╮╭╮
-┃╭╮┣━╮╭┳┳━╮┃╰┫╰╮
-┃╭╮┃╋╰┫╭┫╋╰┫╭┫┃┃
-╰━━┻━━┻╯╰━━┻━┻┻╯
-"""
 
 @barath.on_message(filters.command("alive",prefixes=HANDLER) & filters.user(OWNER_ID))
 async def alive(_, message):
     name = (await barath.get_me()).first_name
     await message.edit(s1)
-    await asyncio.sleep(3)
-    await message.edit(s2)
-    await asyncio.sleep(3)
-    await message.edit(s3)
     await asyncio.sleep(3)
     await message.delete()
     alive = await message.reply_animation(BARATH, caption="")
