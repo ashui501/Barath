@@ -34,4 +34,4 @@ async def ping(_, message):
      end_time = time.time()
      ping_time = round((end_time - start_time) * 1000, 3)
      uptime = get_readable_time((time.time() - StartTime))
-     await message.edit(f"👾 **System uptime & ping**\n=> 🔔 **Pong**: {ping_time}\n=> ⬆️ **Uptime**: {uptime}")
+     await message.edit(f"👾 **System Uptime & Ping**\n=> 🔔 **Ping**: {ping_time}\n=> ⬆️ **Uptime**: {uptime}")
