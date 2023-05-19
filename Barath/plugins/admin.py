@@ -33,7 +33,6 @@ async def promote_member(_, message):
 
 @barath.on_message(filters.command(["pin","unpin"], prefixes=config.HANDLER) & filters.user(config.OWNER_ID))
 async def messages_pin(_, message):
-      """ Reply to Messages for pin either unpin """
       if not message.reply_to_message:
            return await message.edit("No Reply?")
       else:
@@ -67,11 +66,10 @@ async def invite_link(_, message):
 
 @barath.on_message(filters.command("admins", prefixes=config.HANDLER) & filters.user(config.OWNER_ID))
 async def admins_list(_, message):
-     """Get Chat Administrators"""
      chat_id = message.chat.id
      title = message.chat.title
      msg = await message.edit("Analyzing Admins...")
-     mm = f"👮 Admins ( in {title} ):\n"
+     mm = f"👮 Admins in {title}:\n"
      try:
         async for m in barath.get_chat_members(chat_id, filter=enums.ChatMembersFilter.ADMINISTRATORS):
               if m.user.is_bot != True:
@@ -83,7 +81,6 @@ async def admins_list(_, message):
 
 @barath.on_message(filters.command("del", prefixes=config.HANDLER) & filters.user(config.OWNER_ID))
 async def delete_message(_, message):
-     """delete reply to the message and itself"""
      if message.reply_to_message:
          try:
             await message.reply_to_message.delete()
@@ -97,7 +94,6 @@ async def delete_message(_, message):
 
 @barath.on_message(filters.command("ban", prefixes=config.HANDLER) & filters.user(config.OWNER_ID))
 async def ban_member(_, message):
-    """Ban the user from chat"""
     if message.reply_to_message:
          user_id = message.reply_to_message.from_user.id  
     else:
@@ -115,7 +111,6 @@ async def ban_member(_, message):
 
 @barath.on_message(filters.command("unban", prefixes=config.HANDLER) & filters.user(config.OWNER_ID))
 async def unban_member(_, message):
-    """UnBan the user from Chat"""
     if message.reply_to_message:
          user_id = message.reply_to_message.from_user.id  
     else:
@@ -133,7 +128,6 @@ async def unban_member(_, message):
 
 @barath.on_message(filters.command("purge", prefixes=config.HANDLER) & filters.user(config.OWNER_ID))
 async def purge(_, message):
-    """Purge Message(s) Reply to"""
     chat_id = message.chat.id
     if not message.reply_to_message:
         return await message.edit_text("No Reply?")
