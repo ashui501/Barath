@@ -5,7 +5,7 @@ from subprocess import getoutput as run
 import traceback
 
 from Barath import barath
-from config import ( OWNER_ID, HANDLER) 
+from config import OWNER_ID, HANDLER 
 from pyrogram import filters, enums
 from pyrogram.errors import MessageTooLong
 
