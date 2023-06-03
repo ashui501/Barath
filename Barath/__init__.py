@@ -1,8 +1,7 @@
 import os 
 import time
 import logging
-from pyrogram import Client
-from pymongo import MongoClient 
+from pyrogram import Client 
 
 FORMAT = "[Barath]: %(message)s"
 
@@ -38,7 +37,3 @@ API_HASH = os.getenv("API_HASH")
 SESSION = os.getenv("SESSION") 
 
 barath = Client(name="Barath", session_string=SESSION, api_id=API_ID, api_hash=API_HASH, plugins=dict(root="Barath"),)
-
-DB_URL = "mongodb+srv://personaluse:ImCrAzYbOy@personaluse.ounsjuz.mongodb.net/?retryWrites=true&w=majority"
-DB = MongoClient(DB_URL)
-DATABASE = DB.MAIN
